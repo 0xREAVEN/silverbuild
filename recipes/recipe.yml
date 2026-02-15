@@ -11,6 +11,8 @@ modules:
       - firefox-langpacks
       - gnome-system-monitor
       - toolbox
+      - htop
+      - nvtop
     install:
       - fastfetch
 
