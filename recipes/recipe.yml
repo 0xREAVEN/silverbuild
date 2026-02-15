@@ -14,10 +14,6 @@ modules:
     install:
       - fastfetch
 
-  - type: akmods
-    install:
-      - xpadneo
-
   - type: default-flatpaks
     system:
       install:
