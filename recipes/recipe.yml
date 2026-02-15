@@ -23,7 +23,6 @@ modules:
       # ---Utilitaires de base ---
       - distrobox
       - firewall-config
-      - steam-devices
       - bbrew
 
       # --- Thèmes ---
@@ -44,6 +43,7 @@ modules:
       - ublue-motd
 
       # --- Le Pack Gaming ---
+      - steam-devices
       - gamescope
       - mangohud
       - lact
