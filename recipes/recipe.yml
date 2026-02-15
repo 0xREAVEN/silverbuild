@@ -18,7 +18,6 @@ modules:
       - nvtop
       - yelp
       - gnome-software
-      - gnome-software-rpm-ostree
     install:
       # ---Utilitaires de base ---
       - distrobox
