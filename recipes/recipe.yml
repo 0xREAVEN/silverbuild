@@ -12,7 +12,6 @@ modules:
       - gnome-system-monitor
       - malcontent
       - malcontent-control
-      - malcontent-ui
       - toolbox
     install:
       - fastfetch
