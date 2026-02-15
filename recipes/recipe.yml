@@ -1,11 +1,11 @@
 name: mon-os-ublue
-description: Mon image Fedora personnalisée avec xpadneo
+description: Mon image Fedora
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 43
 
 modules:
   - type: rpm-ostree
-remove:
+    remove:
       - gnome-tour
       - firefox
       - firefox-langpacks
@@ -14,7 +14,6 @@ remove:
       - gnome-console
       - malcontent
       - toolbox
-      
     install:
       - fastfetch
 
@@ -25,7 +24,7 @@ remove:
   - type: default-flatpaks
     system:
       install:
-        - com.mozilla.firefox
+        - org.mozilla.firefox
         - com.discordapp.Discord
 
-  - type: signing # Toujours garder à la fin !
+  - type: signing
