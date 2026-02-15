@@ -6,7 +6,11 @@ image-version: 43
 modules:
   - type: rpm-ostree
     repos:
+      # --- Thèmes (Bibata) ---
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-43/peterwu-rendezvous-fedora-43.repo
+      # --- L'écosystème Universal Blue ---
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-43/ublue-os-packages-fedora-43.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-43/ublue-os-staging-fedora-43.repo
     remove:
       # ---Les applications GNOME inutiles ---
       - gnome-tour
@@ -18,6 +22,7 @@ modules:
       - nvtop
       - yelp
       - gnome-software
+      - gnome-software-rpm-ostree
     install:
       # ---Utilitaires de base ---
       - distrobox
@@ -45,7 +50,6 @@ modules:
       - steam-devices
       - gamescope
       - mangohud
-      - lact
 
   - type: default-flatpaks
     configurations:
@@ -69,6 +73,7 @@ modules:
           - io.github.flattool.Ignition
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal
+          - io.github.ilya_zlobintsev.LACT
 
           # --- Thèmes ---
           - org.gtk.Gtk3theme.adw-gtk3-dark
@@ -115,10 +120,5 @@ modules:
     auto-upgrade: true       
     upgrade-interval: '1d'     
     brew-analytics: false
-
-  - type: systemd
-    system:
-      enabled:
-        - lactd.service
 
   - type: signing
