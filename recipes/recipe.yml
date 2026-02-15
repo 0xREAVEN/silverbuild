@@ -30,7 +30,8 @@ modules:
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
-      - nerd-fonts
+      - google-noto-sans-mono-fonts
+      - google-noto-emoji-fonts
 
       # --- L'écosystème Universal Blue (La magie !) ---
       - ublue-os-just
