@@ -5,12 +5,6 @@ image-version: stable
 
 modules:
   - type: rpm-ostree
-    remove:
-      - gnome-tour
-      - gnome-system-monitor
-      - toolbox
-      - htop
-      - nvtop
     install:
       - fastfetch
 
@@ -18,7 +12,6 @@ modules:
     configurations:
       - scope: system
         install:
-          - org.mozilla.firefox
           - com.discordapp.Discord
 
   - type: signing
