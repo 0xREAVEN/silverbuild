@@ -1,6 +1,6 @@
 name: mon-os-ublue
 description: Mon image Fedora
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/bazzite/bazzite-gnome
 image-version: 43
 
 modules:
