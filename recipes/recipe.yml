@@ -33,7 +33,7 @@ modules:
       - google-noto-sans-mono-fonts
       - google-noto-emoji-fonts
 
-      # --- L'écosystème Universal Blue (La magie !) ---
+      # --- L'écosystème Universal Blue ---
       - ublue-os-just
       - ublue-brew
       - ublue-fastfetch
@@ -41,7 +41,7 @@ modules:
       - ublue-os-udev-rules
       - ublue-os-media-automount-udev
       
-      # --- Services d'automatisation (Zéro maintenance) ---
+      # --- Services d'automatisation ---
       - uupd
       - ublue-setup-services
       - ublue-motd
@@ -68,6 +68,8 @@ modules:
           
           # --- Outils système ---
           - io.missioncenter.MissionCenter
+          - io.github.kolunmi.Bazaar
+          - page.tesk.Refine
           - it.mijorus.gearlever
           - io.github.flattool.Warehouse
           - io.github.flattool.Ignition
