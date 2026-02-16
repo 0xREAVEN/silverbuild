@@ -145,6 +145,6 @@ modules:
       - "chmod +x /usr/bin/scb"
       
       # --- Compilation des réglages GNOME (Thèmes, Dock) ---
-      - "dconf update
+      - "dconf update"
 
   - type: signing
