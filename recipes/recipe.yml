@@ -26,6 +26,7 @@ modules:
       # ---Utilitaires de base ---
       - distrobox
       - firewall-config
+      - fastfetch
 
       # --- Thèmes ---
       - papirus-icon-theme
@@ -35,7 +36,6 @@ modules:
 
       # --- L'écosystème Universal Blue ---
       - ublue-brew
-      - ublue-fastfetch
       - ublue-bling
       - ublue-os-udev-rules
       - ublue-os-media-automount-udev
