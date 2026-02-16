@@ -1,0 +1,14 @@
+[org/gnome/desktop/app-folders]
+folder-children=['Accessoires', 'Utilitaires', 'Virtualisation']
+
+[org/gnome/desktop/app-folders/folders/Accessoires]
+name='Accessoires'
+apps=['org.gnome.Calculator.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Logs.desktop', 'org.gnome.Maps.desktop', 'org.gnome.Weather.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Papers.desktop', 'org.gnome.NautilusPreviewer.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Showtime.desktop', 'org.gnome.Lollypop.desktop', 'org.gnome.Evolution.desktop']
+
+[org/gnome/desktop/app-folders/folders/Utilitaires]
+name='Utilitaires'
+apps=['io.missioncenter.MissionCenter.desktop', 'io.github.kolunmi.Bazaar.desktop', 'page.tesk.Refine.desktop', 'it.mijorus.gearlever.desktop', 'io.github.flattool.Warehouse.desktop', 'io.github.flattool.Ignition.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'com.github.tchx84.Flatseal.desktop', 'io.github.ilya_zlobintsev.LACT.desktop']
+
+[org/gnome/desktop/app-folders/folders/Virtualisation]
+name='Virtualisation'
+apps=['com.ranfdev.DistroShelf.desktop', 'org.gnome.Boxes.desktop']

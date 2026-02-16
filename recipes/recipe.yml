@@ -39,6 +39,7 @@ modules:
       - ublue-bling
       - ublue-os-udev-rules
       - ublue-os-media-automount-udev
+      - ublue-os-just
       
       # --- Services d'automatisation ---
       - uupd
@@ -48,6 +49,10 @@ modules:
       - steam-devices
       - gamescope
       - mangohud
+
+      # --- Extensions GNOME ---
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
 
   - type: default-flatpaks
     configurations:
@@ -131,5 +136,9 @@ modules:
     files:
       - source: system
         destination: /
+
+  - type: script
+    snippets:
+      - "dconf update"
 
   - type: signing
