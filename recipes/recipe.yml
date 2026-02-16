@@ -74,6 +74,7 @@ modules:
           - org.gnome.Showtime
           - org.gnome.Lollypop
           - org.gnome.Evolution
+          - org.gnome.TextEditor
           
           # --- Outils système ---
           - io.missioncenter.MissionCenter
