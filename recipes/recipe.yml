@@ -46,7 +46,7 @@ modules:
       - ublue-setup-services
       - ublue-motd
 
-      # --- Le Pack Gaming ---
+      # --- Gaming ---
       - steam-devices
       - gamescope
       - mangohud
@@ -116,6 +116,7 @@ modules:
           # --- Gaming ---
           - com.valvesoftware.Steam
           - com.heroicgameslauncher.hgl
+          - io.github.Faugus.faugus-launcher
           - com.vysp3r.ProtonPlus
           - io.github.benjamimgois.goverlay
           - org.freedesktop.Platform.VulkanLayer.MangoHud
