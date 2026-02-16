@@ -53,6 +53,7 @@ modules:
       # --- Extensions GNOME ---
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-user-theme
 
   - type: default-flatpaks
     configurations:
@@ -139,6 +140,11 @@ modules:
 
   - type: script
     snippets:
-      - "dconf update"
+      # --- Installation de ScopeBuddy ---
+      - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
+      - "chmod +x /usr/bin/scb"
+      
+      # --- Compilation des réglages GNOME (Thèmes, Dock) ---
+      - "dconf update
 
   - type: signing
