@@ -34,7 +34,6 @@ modules:
       - google-noto-emoji-fonts
 
       # --- L'écosystème Universal Blue ---
-      - ublue-os-just
       - ublue-brew
       - ublue-fastfetch
       - ublue-bling
@@ -44,7 +43,6 @@ modules:
       # --- Services d'automatisation ---
       - uupd
       - ublue-setup-services
-      - ublue-motd
 
       # --- Gaming ---
       - steam-devices
