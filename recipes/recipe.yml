@@ -7,11 +7,12 @@ modules:
   - type: rpm-ostree
     repos:
       # --- Thèmes (Bibata) ---
-      - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-43/peterwu-rendezvous-fedora-43.repo
-      - https://copr.fedorainfracloud.org/coprs/sentry/xpadneo/repo/fedora-43/sentry-xpadneo-fedora-43.repo
+      - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
+      # --- xpadneo ---
+      - https://copr.fedorainfracloud.org/coprs/sentry/xpadneo/repo/fedora-%OS_VERSION%/sentry-xpadneo-fedora-%OS_VERSION%.repo
       # --- L'écosystème Universal Blue ---
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-43/ublue-os-packages-fedora-43.repo
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-43/ublue-os-staging-fedora-43.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-packages-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
     remove:
       # ---Les applications GNOME inutiles ---
       - gnome-tour
@@ -28,27 +29,22 @@ modules:
       - distrobox
       - firewall-config
       - fastfetch
-
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
       - adw-gtk3-theme
-
       # --- L'écosystème Universal Blue ---
       - ublue-brew
       - ublue-os-media-automount-udev
       - ublue-os-just
-      
       # --- Services d'automatisation ---
       - uupd
       - ublue-setup-services
-
       # --- Gaming ---
       - steam-devices
       - gamescope
       - mangohud
       - xpadneo
-
       # --- Extensions GNOME ---
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
@@ -76,7 +72,6 @@ modules:
           - org.gnome.TextEditor
           - org.gnome.Loupe
           - org.gnome.SimpleScan
-          
           # --- Outils système ---
           - io.missioncenter.MissionCenter
           - io.github.kolunmi.Bazaar
@@ -87,15 +82,12 @@ modules:
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal
           - io.github.ilya_zlobintsev.LACT
-
           # --- Thèmes ---
           - org.gtk.Gtk3theme.adw-gtk3-dark
           - org.gtk.Gtk3theme.adw-gtk3
-
           # --- Virtualisation ---
           - com.ranfdev.DistroShelf
           - org.gnome.Boxes
-          
           # --- Applications ---
           - org.signal.Signal
           - org.remmina.Remmina
@@ -118,7 +110,6 @@ modules:
           - com.google.Chrome
           - com.discordapp.Discord
           - com.bitwarden.desktop
-
           # --- Gaming ---
           - com.valvesoftware.Steam
           - com.heroicgameslauncher.hgl
@@ -145,7 +136,6 @@ modules:
       # --- Installation de ScopeBuddy ---
       - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
       - "chmod +x /usr/bin/scb"
-      
       # --- Compilation des réglages GNOME (Thèmes, Dock) ---
       - "dconf update"
 
