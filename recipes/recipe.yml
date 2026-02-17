@@ -118,6 +118,13 @@ modules:
           - org.freedesktop.Platform.VulkanLayer.MangoHud
           - org.freedesktop.Platform.VulkanLayer.vkBasalt
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - JetBrainsMono
+        - Hack
+
   - type: brew
     auto-update: true        
     update-interval: '6h'     
