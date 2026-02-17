@@ -32,13 +32,9 @@ modules:
       - papirus-icon-theme
       - bibata-cursor-themes
       - adw-gtk3-theme
-      - google-noto-sans-mono-fonts
-      - google-noto-emoji-fonts
 
       # --- L'écosystème Universal Blue ---
       - ublue-brew
-      - ublue-bling
-      - ublue-os-udev-rules
       - ublue-os-media-automount-udev
       - ublue-os-just
       
@@ -55,6 +51,10 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-user-theme
+
+  - type: akmods
+    install:
+      - xpadneo
 
   - type: default-flatpaks
     configurations:
