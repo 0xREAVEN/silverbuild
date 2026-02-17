@@ -22,7 +22,7 @@ installer-xpadneo:
 # LA COMMANDE MAGIQUE TOUT-EN-UN
 # ==========================================
 
-# Lancer toute la configuration initiale de Mon-OS d'un seul coup
+# Lancer toute la configuration initiale de SilverBuild d'un seul coup
 setup-mon-os: reset-gnome copier-skel installer-xpadneo
     @echo "🎉 TERMINÉ ! Ton environnement est prêt."
     @echo "👉 Prochaine étape : tape 'ujust enroll-secure-boot-key', puis redémarre ton PC !"
