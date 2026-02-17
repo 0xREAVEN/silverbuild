@@ -23,6 +23,6 @@ installer-xpadneo:
 # ==========================================
 
 # Lancer toute la configuration initiale de SilverBuild d'un seul coup
-setup-mon-os: reset-gnome copier-skel installer-xpadneo
+setup-silverbuild: reset-gnome copier-skel installer-xpadneo
     @echo "🎉 TERMINÉ ! Ton environnement est prêt."
     @echo "👉 Prochaine étape : tape 'ujust enroll-secure-boot-key', puis redémarre ton PC !"
