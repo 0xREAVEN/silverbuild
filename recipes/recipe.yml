@@ -8,6 +8,7 @@ modules:
     repos:
       # --- Thèmes (Bibata) ---
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-43/peterwu-rendezvous-fedora-43.repo
+      - https://copr.fedorainfracloud.org/coprs/sentry/xpadneo/repo/fedora-43/sentry-xpadneo-fedora-43.repo
       # --- L'écosystème Universal Blue ---
       - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-43/ublue-os-packages-fedora-43.repo
       - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-43/ublue-os-staging-fedora-43.repo
