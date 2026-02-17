@@ -44,7 +44,6 @@ modules:
       - steam-devices
       - gamescope
       - mangohud
-      - xpadneo
       # --- Extensions GNOME ---
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
