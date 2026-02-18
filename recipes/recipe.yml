@@ -11,7 +11,7 @@ modules:
       # --- xpadneo ---
       - https://copr.fedorainfracloud.org/coprs/sentry/xpadneo/repo/fedora-%OS_VERSION%/sentry-xpadneo-fedora-%OS_VERSION%.repo
       # --- Sunshine (Streaming de jeux) ---
-      - https://copr.fedorainfracloud.org/coprs/lizardbyte/stable/repo/fedora-%OS_VERSION%/lizardbyte-stable-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/lizardbyte/beta/repo/fedora-%OS_VERSION%/lizardbyte-beta-fedora-%OS_VERSION%.repo
       # --- L'écosystème Universal Blue ---
       - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-packages-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
