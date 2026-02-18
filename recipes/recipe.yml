@@ -92,6 +92,7 @@ modules:
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal
           - io.github.ilya_zlobintsev.LACT
+          - ca.desrt.dconf-editor
           # --- Thèmes ---
           - org.gtk.Gtk3theme.adw-gtk3-dark
           - org.gtk.Gtk3theme.adw-gtk3
