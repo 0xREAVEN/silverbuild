@@ -15,6 +15,8 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
       # --- Sunshine (Streaming de jeux) ---
       - https://copr.fedorainfracloud.org/coprs/lizardbyte/beta/repo/fedora-%OS_VERSION%/lizardbyte-beta-fedora-%OS_VERSION%.repo
+      # --- Starship ---
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     remove:
       # ---Les applications GNOME inutiles ---
       - gnome-tour
