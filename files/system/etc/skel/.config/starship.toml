@@ -32,6 +32,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+style = "bold white"
 
 [docker_context]
 symbol = " "
@@ -211,3 +212,7 @@ symbol = " "
 show_always = true
 style_user = "bold white"
 format = '[$user ]($style)'
+
+[character]
+success_symbol = "[❯](bold blue)"
+error_symbol = "[❯](bold red)"

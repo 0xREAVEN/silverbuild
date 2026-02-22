@@ -44,6 +44,7 @@ modules:
       - fastboot
       - adb
       - gparted
+      - git
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
