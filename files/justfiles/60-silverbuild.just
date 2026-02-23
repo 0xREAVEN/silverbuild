@@ -98,3 +98,18 @@ setup-sunshine:
             ;;
         *) echo "Action annulée." ;;
     esac
+
+# ==================================================
+# 🍺 HOMEBREW & BBREW
+# ==================================================
+
+# 🍺 Installe le wrapper bbrew
+setup-brew:
+    #!/usr/bin/bash
+    set -euo pipefail
+
+    echo "📦 Installation du dépôt et du paquet bbrew..."
+    brew install Valkyrie00/homebrew-bbrew/bbrew
+
+    echo -e "\n🎉 \033[32mInstallation terminée !\033[0m"
+    echo "Ferme ce terminal et ouvres-en un nouveau pour utiliser la commande 'bbrew'."
