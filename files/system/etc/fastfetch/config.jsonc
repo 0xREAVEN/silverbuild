@@ -11,8 +11,8 @@
             "type": "title",
             "key": " ",
             "color": {
-                "user": "light_blue",
-                "at": "white",
+                "user": "white",
+                "at": "light_blue",
                 "host": "blue"
             }
         },
