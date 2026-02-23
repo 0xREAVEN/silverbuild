@@ -2,7 +2,7 @@
 # 🚀 SYSTEM & UPDATES
 # ==================================================
 
-# 🔄 Met à jour tout le système (OSTree, Flatpaks)
+# Met à jour tout le système (OSTree, Flatpaks)
 update:
     #!/usr/bin/bash
     echo "🔄 Mise à jour de l'image système (OSTree)..."
@@ -11,15 +11,7 @@ update:
     flatpak update -y
     echo "✅ Mise à jour terminée ! N'oubliez pas de redémarrer si l'image a changé."
 
-# 🧹 Nettoie le système en profondeur
-clean:
-    #!/usr/bin/bash
-    echo "🗑️ Nettoyage des Flatpaks inutilisés..."
-    flatpak uninstall --unused -y
-    echo "🧹 Nettoyage du cache système..."
-    rpm-ostree cleanup -m -b
-    echo "✅ Système tout propre !"
-
+# Ouverture et fermeture des ports pour GSConnec
 setup-gsconnect:
     #!/usr/bin/bash
     set -euo pipefail
@@ -45,7 +37,7 @@ setup-gsconnect:
 # 🎮 GAMING & AFFICHAGE
 # ==================================================
 
-# 🚀 Force l'upgrade FSR 4
+# Force l'upgrade FSR 4
 toggle-fsr4:
     #!/usr/bin/bash
     set -euo pipefail
@@ -66,7 +58,7 @@ toggle-fsr4:
         *) echo "Action annulée." ;;
     esac
 
-# ☀️ Configure le service Sunshine pour le streaming local (et ouvre les ports)
+# Configure le service Sunshine pour le streaming local (et ouvre les ports)
 setup-sunshine:
     #!/usr/bin/bash
     set -euo pipefail
@@ -103,7 +95,7 @@ setup-sunshine:
 # 🍺 HOMEBREW & BBREW
 # ==================================================
 
-# 🍺 Installe le wrapper bbrew
+# Installe le wrapper bbrew
 setup-brew:
     #!/usr/bin/bash
     set -euo pipefail
