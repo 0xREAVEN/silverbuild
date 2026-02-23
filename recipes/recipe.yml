@@ -105,6 +105,7 @@ modules:
           - com.github.tchx84.Flatseal
           - io.github.ilya_zlobintsev.LACT
           - ca.desrt.dconf-editor
+          - org.pulseaudio.pavucontrol
           # --- Thèmes ---
           - org.gtk.Gtk3theme.adw-gtk3-dark
           - org.gtk.Gtk3theme.adw-gtk3
@@ -172,5 +173,7 @@ modules:
       - "flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
       # --- Tuer flatpak setup ---
       - "systemctl mask system-flatpak-setup.service"
+
+  - type: justfiles
 
   - type: signing
