@@ -41,8 +41,6 @@ modules:
       - firewall-config
       - fastfetch
       - unar
-      - fastboot
-      - adb
       - gparted
       - git
       # --- Thèmes ---
@@ -69,6 +67,10 @@ modules:
       # --- Terminal ---
       - fish
       - starship
+      # --- Android ---
+      - fastboot
+      - adb
+      - android-udev-rules
 
   - type: default-flatpaks
     configurations:
