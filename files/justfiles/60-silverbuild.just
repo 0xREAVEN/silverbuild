@@ -45,18 +45,18 @@ setup-gsconnect:
 # 🎮 GAMING & AFFICHAGE
 # ==================================================
 
-# 🚀 Force l'upgrade FSR 4 [cite: 107]
+# 🚀 Force l'upgrade FSR 4
 toggle-fsr4:
     #!/usr/bin/bash
     set -euo pipefail
     FILE="$HOME/.config/environment.d/99-proton-fsr4.conf"
     echo -e "\033[1mGlobal FSR4 (RDNA4)\033[0m"
-    echo "Permet à Proton de forcer le FSR 4 sur les jeux compatibles (FSR 3.1+). [cite: 110]"
+    echo "Permet à Proton de forcer le FSR 4 sur les jeux compatibles (FSR 3.1+)."
     read -p "Voulez-vous (A)ctiver ou (D)ésactiver ? " choice
     case "$choice" in
         A|a)
             mkdir -p "$HOME/.config/environment.d"
-            echo "PROTON_FSR4_UPGRADE=1" > "$FILE" [cite: 111]
+            echo "PROTON_FSR4_UPGRADE=1" > "$FILE"
             echo -e "✅ \033[32mActivé\033[0m: PROTON_FSR4_UPGRADE=1"
             ;;
         D|d)
