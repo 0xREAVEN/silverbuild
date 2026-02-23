@@ -11,7 +11,7 @@ update:
     flatpak update -y
     echo "✅ Mise à jour terminée ! N'oubliez pas de redémarrer si l'image a changé."
 
-# Ouverture et fermeture des ports pour GSConnec
+# Ouverture et fermeture des ports pour GSConnect
 setup-gsconnect:
     #!/usr/bin/bash
     set -euo pipefail

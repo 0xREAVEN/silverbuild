@@ -1,10 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=System Update
-Name[cs]=Aktualizace systému
 Name[fr]=Mises à jour
-Name[el]=Ενημέρωση συστήματος
-Name[ru]=Обновление системы
 Comment=Update Fedora, Flatpaks
 Icon=/usr/share/ublue-os/icons/update.svg
 Categories=ConsoleOnly;System;
