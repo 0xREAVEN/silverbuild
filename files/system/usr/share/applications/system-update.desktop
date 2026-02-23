@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=System Update
+Name[cs]=Aktualizace systému
+Name[fr]=Mises à jour
+Name[el]=Ενημέρωση συστήματος
+Name[ru]=Обновление системы
+Comment=Update Fedora, Flatpaks
+Icon=/usr/share/ublue-os/icons/update.png
+Categories=ConsoleOnly;System;
+Terminal=true
+Exec=/usr/bin/ujust update
