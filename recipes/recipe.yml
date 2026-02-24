@@ -67,10 +67,6 @@ modules:
       # --- Terminal ---
       - fish
       - starship
-      # --- Android ---
-      - fastboot
-      - adb
-      - android-udev-rules
 
   - type: default-flatpaks
     configurations:

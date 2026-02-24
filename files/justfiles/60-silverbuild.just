@@ -33,25 +33,6 @@ setup-gsconnect:
         *) echo "Action annulée." ;;
     esac
 
-# Rend le démarrage 100% silencieux (Masque le texte et affiche le logo OEM)
-setup-silent-boot:
-    #!/usr/bin/bash
-    set -euo pipefail
-    echo "🤫 Configuration du démarrage silencieux..."
-    
-    # 1. On cache le menu GRUB (au cas où ce n'est pas fait)
-    sudo grub2-editenv - set menu_auto_hide=1
-    
-    # 2. On réduit le temps d'attente fantôme à 0
-    sudo grub2-editenv - set timeout=0
-    
-    # 3. On ajoute les paramètres de silence au noyau (sans casser l'image)
-    echo "⚙️ Ajout des paramètres silencieux au noyau..."
-    rpm-ostree kargs --append-if-missing=quiet --append-if-missing=rhgb --append-if-missing=rd.udev.log_level=3
-    
-    echo -e "✅ \033[32mDémarrage silencieux activé !\033[0m"
-    echo "⚠️ Comme on a modifié le noyau, il faut redémarrer pour appliquer."
-
 # Restaure les configurations par défaut du système (/etc/skel)
 restore-skel:
     #!/usr/bin/bash
