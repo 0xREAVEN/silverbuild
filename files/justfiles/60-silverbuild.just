@@ -33,24 +33,24 @@ setup-gsconnect:
         *) echo "Action annulée." ;;
     esac
 
-# Masque ou affiche le menu de démarrage (GRUB)
-toggle-grub:
+# Rend le démarrage 100% silencieux (Masque le texte et affiche le logo OEM)
+setup-silent-boot:
     #!/usr/bin/bash
     set -euo pipefail
-    echo -e "\033[1mConfiguration du menu de démarrage (GRUB)\033[0m"
-    read -p "Voulez-vous (M)asquer ou (A)fficher le menu GRUB au démarrage ? " choice
-    case "$choice" in
-        M|m)
-            sudo grub2-editenv - set menu_auto_hide=1
-            echo -e "✅ \033[32mMenu GRUB masqué !\033[0m Ton PC démarrera directement sur SilverBuild."
-            echo "💡 Astuce : Maintiens la touche MAJ (Shift) ou Échap au démarrage si tu as besoin de le faire réapparaître."
-            ;;
-        A|a)
-            sudo grub2-editenv - unset menu_auto_hide
-            echo -e "✅ \033[32mMenu GRUB affiché !\033[0m Tu verras le menu à chaque démarrage."
-            ;;
-        *) echo "Action annulée." ;;
-    esac
+    echo "🤫 Configuration du démarrage silencieux..."
+    
+    # 1. On cache le menu GRUB (au cas où ce n'est pas fait)
+    sudo grub2-editenv - set menu_auto_hide=1
+    
+    # 2. On réduit le temps d'attente fantôme à 0
+    sudo grub2-editenv - set timeout=0
+    
+    # 3. On ajoute les paramètres de silence au noyau (sans casser l'image)
+    echo "⚙️ Ajout des paramètres silencieux au noyau..."
+    rpm-ostree kargs --append-if-missing=quiet --append-if-missing=rhgb --append-if-missing=rd.udev.log_level=3
+    
+    echo -e "✅ \033[32mDémarrage silencieux activé !\033[0m"
+    echo "⚠️ Comme on a modifié le noyau, il faut redémarrer pour appliquer."
 
 # Restaure les configurations par défaut du système (/etc/skel)
 restore-skel:
