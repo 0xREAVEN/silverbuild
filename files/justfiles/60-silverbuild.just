@@ -33,6 +33,47 @@ setup-gsconnect:
         *) echo "Action annulée." ;;
     esac
 
+# Masque ou affiche le menu de démarrage (GRUB)
+toggle-grub:
+    #!/usr/bin/bash
+    set -euo pipefail
+    echo -e "\033[1mConfiguration du menu de démarrage (GRUB)\033[0m"
+    read -p "Voulez-vous (M)asquer ou (A)fficher le menu GRUB au démarrage ? " choice
+    case "$choice" in
+        M|m)
+            sudo grub2-editenv - set menu_auto_hide=1
+            echo -e "✅ \033[32mMenu GRUB masqué !\033[0m Ton PC démarrera directement sur SilverBuild."
+            echo "💡 Astuce : Maintiens la touche MAJ (Shift) ou Échap au démarrage si tu as besoin de le faire réapparaître."
+            ;;
+        A|a)
+            sudo grub2-editenv - unset menu_auto_hide
+            echo -e "✅ \033[32mMenu GRUB affiché !\033[0m Tu verras le menu à chaque démarrage."
+            ;;
+        *) echo "Action annulée." ;;
+    esac
+
+# Restaure les configurations par défaut du système (/etc/skel)
+restore-skel:
+    #!/usr/bin/bash
+    set -euo pipefail
+    echo -e "\033[1mRestauration du dossier personnel (/etc/skel)\033[0m"
+    echo "Le dossier /etc/skel contient les fichiers de configuration par défaut du système (ex: .bashrc, .config...)."
+    echo ""
+    read -p "Voulez-vous (M)anquants (copier sans écraser), (E)craser tout, ou (A)nnuler ? " choice
+    case "$choice" in
+        M|m)
+            echo "📁 Copie uniquement des fichiers manquants..."
+            cp -rn /etc/skel/. $HOME/
+            echo -e "✅ \033[32mFichiers manquants restaurés ! Tes configurations actuelles n'ont pas été touchées.\033[0m"
+            ;;
+        E|e)
+            echo "⚠️ Copie et écrasement des fichiers existants..."
+            cp -r /etc/skel/. $HOME/
+            echo -e "✅ \033[32mDossier personnel réinitialisé avec les paramètres par défaut !\033[0m"
+            ;;
+        *) echo "Action annulée." ;;
+    esac
+
 # ==================================================
 # 🎮 GAMING & AFFICHAGE
 # ==================================================
