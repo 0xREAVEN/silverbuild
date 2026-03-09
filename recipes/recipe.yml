@@ -60,6 +60,8 @@ modules:
       - mangohud
       - gamemode
       - Sunshine
+      # --- Pilotes Xbox Elite Series 2 ---
+      - kmod-xpadneo
       # --- Extensions GNOME ---
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
@@ -67,12 +69,6 @@ modules:
       # --- Terminal ---
       - fish
       - starship
-
-  - type: akmods
-    base: main
-    install:
-      - xpadneo
-      - xone
 
   - type: default-flatpaks
     configurations:
