@@ -68,6 +68,12 @@ modules:
       - fish
       - starship
 
+  - type: akmods
+    base: main
+    install:
+      - xpadneo
+      - xone
+
   - type: default-flatpaks
     configurations:
       - scope: system
