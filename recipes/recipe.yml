@@ -62,7 +62,7 @@ modules:
       - mangohud
       - gamemode
       - Sunshine
-      - xpadneo
+      - xpadneo-kmod
       # --- Extensions GNOME ---
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
