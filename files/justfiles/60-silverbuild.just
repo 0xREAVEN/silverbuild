@@ -95,13 +95,13 @@ setup-sunshine:
             sudo firewall-cmd --permanent --add-port=48002/udp
             sudo firewall-cmd --reload
             echo "🚀 Activation du service Sunshine..."
-            systemctl enable --user --now sunshine-kms.service
+            systemctl enable --user --now app-dev.lizardbyte.app.Sunshine.service
             echo -e "✅ \033[32mSunshine est activé et les ports sont ouverts !\033[0m"
             echo "👉 Tu peux y accéder via https://localhost:47990"
             ;;
         D|d)
             echo "🛑 Désactivation du service Sunshine..."
-            systemctl disable --user --now sunshine-kms.service
+            systemctl disable --user --now app-dev.lizardbyte.app.Sunshine.service
             echo "🔒 Fermeture des ports du pare-feu..."
             sudo firewall-cmd --permanent --remove-port=47984-47990/tcp
             sudo firewall-cmd --permanent --remove-port=48010/tcp
