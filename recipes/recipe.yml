@@ -22,7 +22,6 @@ modules:
       
       # --- Applications demandées ---
       - yelp                # Aide GNOME
-      - gnome-tour          # Bienvenue GNOME
       - Sunshine            # (Bazzite l'inclut par défaut, on le retire ici)
       - waydroid            # (Support Android)
 
