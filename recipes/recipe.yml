@@ -1,7 +1,6 @@
 name: silverbuild
 description: Bazzite - Version optimisée et allégée.
 base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: 43
 
 modules:
   - type: rpm-ostree
@@ -18,7 +17,7 @@ modules:
       - spice-vdagent
       - xorg-x11-drv-vmware
       - xorg-x11-drv-qxl
-      - VirtualBox-guest-additions
+      - virtualbox-guest-additions
       
       # --- Applications demandées ---
       - yelp                # Aide GNOME
