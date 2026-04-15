@@ -1,28 +1,177 @@
 name: silverbuild
-description: Bazzite - Version optimisée et allégée.
-base-image: ghcr.io/ublue-os/bazzite-gnome
+description: L'alliance parfaite entre Fedora Silverblue et BlueBuild, pour mes besoins.
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 43
 
 modules:
   - type: rpm-ostree
     repos:
-      # --- Starship & Thèmes ---
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      # --- L'écosystème Universal Blue ---
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-packages-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/bazzite/repo/fedora-%OS_VERSION%/ublue-os-bazzite-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/repo/fedora-%OS_VERSION%/ublue-os-akmods-fedora-%OS_VERSION%.repo
+      # --- Thèmes (Bibata) ---
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
-
+      # --- Sunshine (Streaming de jeux) ---
+      - https://copr.fedorainfracloud.org/coprs/lizardbyte/beta/repo/fedora-%OS_VERSION%/lizardbyte-beta-fedora-%OS_VERSION%.repo
+      # --- Starship ---
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      # --- Xpadneo (manette Xbox Elite Series 2) ---
+      - https://copr.fedorainfracloud.org/coprs/sentry/xpadneo/repo/fedora-%OS_VERSION%/sentry-xpadneo-fedora-%OS_VERSION%.repo
     remove:
-      # --- Debloat Virtualisation Guest (Non nécessaire sur PC physique) ---
-      - open-vm-tools
-      - hyperv-daemons
-      - qemu-guest-agent
-      - spice-vdagent
-      - xorg-x11-drv-vmware
-      - xorg-x11-drv-qxl
-      - virtualbox-guest-additions
-      
-      # --- Applications demandées ---
-      - yelp                # Aide GNOME
-      - Sunshine            # (Bazzite l'inclut par défaut, on le retire ici)
-      - waydroid            # (Support Android)
+      # ---Les applications GNOME inutiles ---
+      - gnome-tour
+      - firefox
+      - firefox-langpacks
+      - gnome-system-monitor
+      - toolbox
+      - htop
+      - nvtop
+      - yelp
+      - gnome-software
+      - gnome-initial-setup
+      - gnome-classic-session
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
+    install:
+      # ---Utilitaires de base ---
+      - distrobox
+      - firewall-config
+      - fastfetch
+      - unar
+      - gparted
+      - git
+      # --- Thèmes ---
+      - papirus-icon-theme
+      - bibata-cursor-themes
+      - adw-gtk3-theme
+      # --- L'écosystème Universal Blue ---
+      - ublue-brew
+      - ublue-os-media-automount-udev
+      - ublue-os-just
+      # --- Services d'automatisation ---
+      - uupd
+      - ublue-setup-services
+      # --- Gaming ---
+      - steam-devices
+      - gamescope
+      - mangohud
+      - gamemode
+      - Sunshine
+      # --- Extensions GNOME ---
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-user-theme
+      # --- Terminal ---
+      - fish
+      - starship
+
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        install:
+          # --- Applications GNOME ---
+          - org.gnome.Calculator
+          - org.gnome.Calendar
+          - org.gnome.Characters
+          - org.gnome.clocks
+          - org.gnome.Logs
+          - org.gnome.Maps
+          - org.gnome.Weather
+          - org.gnome.baobab
+          - org.gnome.Papers
+          - org.gnome.NautilusPreviewer
+          - org.gnome.font-viewer
+          - org.gnome.Showtime
+          - org.gnome.Lollypop
+          - org.gnome.Evolution
+          - org.gnome.TextEditor
+          - org.gnome.Loupe
+          - org.gnome.SimpleScan
+          # --- Outils système ---
+          - io.missioncenter.MissionCenter
+          - io.github.kolunmi.Bazaar
+          - page.tesk.Refine
+          - it.mijorus.gearlever
+          - io.github.flattool.Warehouse
+          - io.github.flattool.Ignition
+          - com.mattjakeman.ExtensionManager
+          - com.github.tchx84.Flatseal
+          - io.github.ilya_zlobintsev.LACT
+          - ca.desrt.dconf-editor
+          - org.pulseaudio.pavucontrol
+          # --- Thèmes ---
+          - org.gtk.Gtk3theme.adw-gtk3-dark
+          - org.gtk.Gtk3theme.adw-gtk3
+          # --- Virtualisation ---
+          - com.ranfdev.DistroShelf
+          - org.gnome.Boxes
+          # --- Applications ---
+          - org.signal.Signal
+          - org.remmina.Remmina
+          - org.raspberrypi.rpi-imager
+          - org.onlyoffice.desktopeditors
+          - org.gimp.GIMP
+          - org.freecad.FreeCAD
+          - org.deluge_torrent.deluge
+          - net.cozic.joplin_desktop
+          - me.proton.Mail
+          - io.gitlab.news_flash.NewsFlash
+          - io.gitlab.librewolf-community
+          - im.riot.Riot
+          - com.visualstudio.code
+          - com.ultimaker.cura
+          - com.spotify.Client
+          - com.jeffser.Alpaca
+          - com.jeffser.Alpaca.Plugins.AMD
+          - com.jeffser.Alpaca.Plugins.Ollama
+          - com.google.Chrome
+          - com.discordapp.Discord
+          - com.bitwarden.desktop
+          # --- Gaming ---
+          - com.valvesoftware.Steam
+          - com.heroicgameslauncher.hgl
+          - io.github.Faugus.faugus-launcher
+          - com.vysp3r.ProtonPlus
+          - io.github.benjamimgois.goverlay
+          - org.freedesktop.Platform.VulkanLayer.MangoHud
+          - org.freedesktop.Platform.VulkanLayer.vkBasalt
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - JetBrainsMono
+        - Hack
+
+  - type: brew
+    auto-update: true        
+    update-interval: '6h'     
+    auto-upgrade: true       
+    upgrade-interval: '1d'     
+    brew-analytics: false
+
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: script
+    snippets:
+      # --- Installation de ScopeBuddy ---
+      - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
+      - "chmod +x /usr/bin/scb"
+      # --- Compilation des réglages GNOME (Thèmes, Dock) ---
+      - "dconf update"
+      # --- On ajoute Flathub ---
+      - "flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
+      # --- Tuer flatpak setup ---
+      - "systemctl mask system-flatpak-setup.service"
+
+  - type: justfiles
 
   - type: signing
