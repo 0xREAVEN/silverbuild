@@ -110,8 +110,6 @@ modules:
           - io.github.Faugus.faugus-launcher
           - com.vysp3r.ProtonPlus
           - io.github.benjamimgois.goverlay
-          - org.freedesktop.Platform.VulkanLayer.MangoHud
-          - org.freedesktop.Platform.VulkanLayer.vkBasalt
 
   - type: fonts
     fonts:
@@ -137,12 +135,6 @@ modules:
       # --- Installation de ScopeBuddy ---
       - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
       - "chmod +x /usr/bin/scb"
-      # --- Compilation des réglages GNOME (Thèmes, Dock) ---
-      - "dconf update"
-      # --- On ajoute Flathub ---
-      - "flatpak remote-add --if-not-exists --system flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
-      # --- Tuer flatpak setup ---
-      - "systemctl mask system-flatpak-setup.service"
 
   - type: justfiles
 
