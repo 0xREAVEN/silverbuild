@@ -52,16 +52,11 @@ modules:
       - uupd
       - ublue-setup-services
       # --- Gaming ---
+      - steam
       - steam-devices
       - gamescope
       - mangohud
       - gamemode
-      #- kmod-xpadneo
-      #- xpadneo-kmod-common
-      # --- Extensions GNOME ---
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-user-theme
       # --- Terminal ---
       - fish
       - starship
@@ -102,38 +97,15 @@ modules:
           - com.mattjakeman.ExtensionManager
           - com.github.tchx84.Flatseal
           - io.github.ilya_zlobintsev.LACT
-          - ca.desrt.dconf-editor
-          - org.pulseaudio.pavucontrol
+          # --- Browser ---
+          - org.mozilla.firefox 
           # --- Thèmes ---
           - org.gtk.Gtk3theme.adw-gtk3-dark
           - org.gtk.Gtk3theme.adw-gtk3
           # --- Virtualisation ---
           - com.ranfdev.DistroShelf
           - org.gnome.Boxes
-          # --- Applications ---
-          - org.signal.Signal
-          - org.remmina.Remmina
-          - org.raspberrypi.rpi-imager
-          - org.onlyoffice.desktopeditors
-          - org.gimp.GIMP
-          - org.freecad.FreeCAD
-          - org.deluge_torrent.deluge
-          - net.cozic.joplin_desktop
-          - me.proton.Mail
-          - io.gitlab.news_flash.NewsFlash
-          - io.gitlab.librewolf-community
-          - im.riot.Riot
-          - com.visualstudio.code
-          - com.ultimaker.cura
-          - com.spotify.Client
-          - com.jeffser.Alpaca
-          - com.jeffser.Alpaca.Plugins.AMD
-          - com.jeffser.Alpaca.Plugins.Ollama
-          - com.google.Chrome
-          - com.discordapp.Discord
-          - com.bitwarden.desktop
           # --- Gaming ---
-          - com.valvesoftware.Steam
           - com.heroicgameslauncher.hgl
           - io.github.Faugus.faugus-launcher
           - com.vysp3r.ProtonPlus
