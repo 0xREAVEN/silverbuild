@@ -59,8 +59,8 @@ modules:
       - gamescope
       - mangohud
       - gamemode
-      - kmod-xpadneo
-      - xpadneo-kmod-common
+      #- kmod-xpadneo
+      #- xpadneo-kmod-common
       # --- Extensions GNOME ---
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
@@ -68,6 +68,10 @@ modules:
       # --- Terminal ---
       - fish
       - starship
+
+  - type: akmods
+    install:
+      - xpadneo
 
   - type: default-flatpaks
     configurations:
