@@ -20,7 +20,6 @@ modules:
       - firefox
       - firefox-langpacks
       - gnome-system-monitor
-      - toolbox
       - htop
       - nvtop
       - yelp
@@ -40,6 +39,15 @@ modules:
       - unar
       - gparted
       - git
+      - bazaar
+      - topgrade
+      - glow
+      - gum
+      - mesa-libOpenCL
+      - nautilus-extensions
+      - nautilus-gsconnect
+      - nautilus-python
+      - tailscale
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
@@ -57,6 +65,14 @@ modules:
       - gamescope
       - mangohud
       - gamemode
+      - rom-properties
+      - rom-properties-common
+      - rom-properties-gtk4
+      - rom-properties-localsearch3
+      - rom-properties-utils
+      - input-remapper
+      - ScopeBuddy
+      - vkBasalt
       # --- Terminal ---
       - fish
       - starship
@@ -89,7 +105,6 @@ modules:
           - org.gnome.SimpleScan
           # --- Outils système ---
           - io.missioncenter.MissionCenter
-          - io.github.kolunmi.Bazaar
           - page.tesk.Refine
           - it.mijorus.gearlever
           - io.github.flattool.Warehouse
@@ -120,21 +135,19 @@ modules:
 
   - type: brew
     auto-update: true        
-    update-interval: '6h'     
+    update-interval: '12h'     
     auto-upgrade: true       
-    upgrade-interval: '1d'     
+    upgrade-interval: '3d'     
     brew-analytics: false
+    taps:
+      - ublue-os/tap
+    install:
+      - visual-studio-code-linux
 
   - type: files
     files:
       - source: system
         destination: /
-
-  - type: script
-    snippets:
-      # --- Installation de ScopeBuddy ---
-      - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
-      - "chmod +x /usr/bin/scb"
 
   - type: justfiles
 
