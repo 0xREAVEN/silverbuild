@@ -142,9 +142,9 @@ modules:
 
     - type: script
     scripts:
-    - |
-      brew tap ublue-os/tap
-      brew install visual-studio-code-linux
+     - |
+       brew tap ublue-os/tap
+       brew install visual-studio-code-linux
 
   - type: files
     files:
