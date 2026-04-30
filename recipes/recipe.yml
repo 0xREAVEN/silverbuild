@@ -39,15 +39,15 @@ modules:
       - unar
       - gparted
       - git
-      - bazaar
-      - topgrade
-      - glow
-      - gum
-      - mesa-libOpenCL
-      - nautilus-extensions
-      - nautilus-gsconnect
-      - nautilus-python
-      - tailscale
+      # - bazaar
+      # - topgrade
+      # - glow
+      # - gum
+      # - mesa-libOpenCL
+      # - nautilus-extensions
+      # - nautilus-gsconnect
+      # - nautilus-python
+      # - tailscale
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
@@ -65,10 +65,10 @@ modules:
       - gamescope
       - mangohud
       - gamemode
-      - rom-properties
-      - input-remapper
-      - ScopeBuddy
-      - vkBasalt
+      # - rom-properties
+      # - input-remapper
+      # - ScopeBuddy
+      # - vkBasalt
       # --- Terminal ---
       - fish
       - starship
