@@ -1,3 +1,154 @@
-brew:
-  install:
-    - visual-studio-code-linux
+name: silverbuild
+description: L'alliance parfaite entre Fedora Silverblue et BlueBuild, pour mes besoins.
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 44
+
+modules:
+  - type: rpm-ostree
+    repos:
+     # --- L'écosystème Universal Blue ---
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-packages-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ublue-os/bazzite/repo/fedora-%OS_VERSION%/ublue-os-bazzite-fedora-%OS_VERSION%.repo
+      # --- Thèmes (Bibata) ---
+      - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
+      # --- Starship ---
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    remove:
+      # ---Les applications GNOME inutiles ---
+      - gnome-tour
+      - firefox
+      - firefox-langpacks
+      - gnome-system-monitor
+      - htop
+      - nvtop
+      - yelp
+      - gnome-software
+      - gnome-initial-setup
+      - gnome-classic-session
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
+    install:
+      # ---Utilitaires de base ---
+      - distrobox
+      - firewall-config
+      - fastfetch
+      - unar
+      - gparted
+      - git
+      - bazaar
+      - topgrade
+      - glow
+      - gum
+      - mesa-libOpenCL
+      - nautilus-extensions
+      - nautilus-gsconnect
+      - nautilus-python
+      - tailscale
+      # --- Thèmes ---
+      - papirus-icon-theme
+      - bibata-cursor-themes
+      - adw-gtk3-theme
+      # --- L'écosystème Universal Blue ---
+      - ublue-brew
+      - ublue-os-media-automount-udev
+      - ublue-os-just
+      # --- Services d'automatisation ---
+      - uupd
+      - ublue-setup-services
+      # --- Gaming ---
+      - steam
+      - steam-devices
+      - gamescope
+      - mangohud
+      - gamemode
+      - rom-properties
+      - rom-properties-common
+      - rom-properties-gtk4
+      - rom-properties-localsearch3
+      - rom-properties-utils
+      - input-remapper
+      - ScopeBuddy
+      - vkBasalt
+      # --- Terminal ---
+      - fish
+      - starship
+
+  - type: akmods
+    install:
+      - xpadneo
+
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        install:
+          # --- Applications GNOME ---
+          - org.gnome.Calculator
+          - org.gnome.Calendar
+          - org.gnome.Characters
+          - org.gnome.clocks
+          - org.gnome.Logs
+          - org.gnome.Maps
+          - org.gnome.Weather
+          - org.gnome.baobab
+          - org.gnome.Papers
+          - org.gnome.NautilusPreviewer
+          - org.gnome.font-viewer
+          - org.gnome.Showtime
+          - org.gnome.Lollypop
+          - org.gnome.Evolution
+          - org.gnome.TextEditor
+          - org.gnome.Loupe
+          - org.gnome.SimpleScan
+          # --- Outils système ---
+          - io.missioncenter.MissionCenter
+          - page.tesk.Refine
+          - it.mijorus.gearlever
+          - io.github.flattool.Warehouse
+          - io.github.flattool.Ignition
+          - com.mattjakeman.ExtensionManager
+          - com.github.tchx84.Flatseal
+          - io.github.ilya_zlobintsev.LACT
+          # --- Browser ---
+          - org.mozilla.firefox 
+          # --- Thèmes ---
+          - org.gtk.Gtk3theme.adw-gtk3-dark
+          - org.gtk.Gtk3theme.adw-gtk3
+          # --- Virtualisation ---
+          - com.ranfdev.DistroShelf
+          - org.gnome.Boxes
+          # --- Gaming ---
+          - com.heroicgameslauncher.hgl
+          - io.github.Faugus.faugus-launcher
+          - com.vysp3r.ProtonPlus
+          - io.github.benjamimgois.goverlay
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - JetBrainsMono
+        - Hack
+
+  - type: brew
+    auto-update: true
+    update-interval: '12h'
+    auto-upgrade: true
+    upgrade-interval: '3d'
+    brew-analytics: false
+    taps:
+      - ublue-os/tap
+    install:
+      - visual-studio-code-linux
+
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: justfiles
+
+  - type: signing
