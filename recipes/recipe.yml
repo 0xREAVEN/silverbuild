@@ -44,7 +44,7 @@ modules:
       - topgrade
       - glow
       - gum
-      # - mesa-libOpenCL
+      - mesa-libOpenCL
       # - nautilus-extensions
       # - nautilus-gsconnect
       # - nautilus-python
