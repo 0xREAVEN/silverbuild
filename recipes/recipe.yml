@@ -45,10 +45,10 @@ modules:
       - glow
       - gum
       - mesa-libOpenCL
-      # - nautilus-extensions
-      # - nautilus-gsconnect
-      # - nautilus-python
-      # - tailscale
+      - nautilus-extensions
+      - nautilus-gsconnect
+      - nautilus-python
+      - tailscale
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
