@@ -41,7 +41,7 @@ modules:
       - gparted
       - git
       # - bazaar
-      # - topgrade
+      - topgrade
       # - glow
       # - gum
       # - mesa-libOpenCL
