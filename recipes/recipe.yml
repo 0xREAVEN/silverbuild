@@ -68,8 +68,8 @@ modules:
       - gamemode
       - rom-properties-gtk3
       - input-remapper
-      - ScopeBuddy
-      # - vkBasalt
+      # - ScopeBuddy
+      - vkBasalt
       # --- Terminal ---
       - fish
       - starship
