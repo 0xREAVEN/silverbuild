@@ -10,7 +10,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/ublue-os/packages/repo/fedora-%OS_VERSION%/ublue-os-packages-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/ublue-os/bazzite/repo/fedora-%OS_VERSION%/ublue-os-bazzite-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/rom-properties/repo/fedora-%OS_VERSION%/ublue-os-rom-properties-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/kylegospo/rom-properties/repo/fedora-%OS_VERSION%/kylegospo-rom-properties-fedora-%OS_VERSION%.repo
       # --- Thèmes (Bibata) ---
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
       # --- Starship ---
@@ -66,7 +66,7 @@ modules:
       - gamescope
       - mangohud
       - gamemode
-      # - rom-properties-gtk3
+      - rom-properties-gtk3
       - input-remapper
       # - ScopeBuddy
       # - vkBasalt
