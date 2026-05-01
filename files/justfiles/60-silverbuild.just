@@ -55,6 +55,65 @@ restore-skel:
         *) echo "Action annulée." ;;
     esac
 
+# Activer ou désactiver l'installation automatique des Flatpaks au démarrage (pour éviter le spam de notifications). Options: status | enable | disable
+[group("system")]
+toggle-flatpak-setup ACTION="":
+    #!/usr/bin/bash
+    source /usr/lib/ujust/ujust.sh
+    
+    SERVICE="system-flatpak-setup.service"
+    
+    # Vérifier l'état actuel du service
+    if systemctl is-enabled --quiet "$SERVICE" 2>/dev/null; then
+        STATUS="Enabled"
+    else
+        STATUS="Disabled"
+    fi
+
+    OPTION="{{ ACTION }}"
+    
+    if [ "$OPTION" == "help" ]; then
+        echo "Utilisation : ujust toggle-flatpak-setup <option>"
+        echo "  <option>: Spécifiez l'action pour passer le menu interactif"
+        echo "  Utilisez 'enable' pour activer l'installation automatique au démarrage"
+        echo "  Utilisez 'disable' pour désactiver l'installation automatique au démarrage"
+        exit 0
+    elif [ "$OPTION" == "status" ]; then
+        echo "$STATUS"
+        exit 0
+    elif [ -z "$OPTION" ]; then
+        echo "${bold}Configuration de l'installation automatique des Flatpaks${normal}"
+        echo "Ce service vérifie et installe les Flatpaks manquants au démarrage."
+        echo "S'il vous envoie une notification à chaque fois, vous pouvez le désactiver"
+        echo "une fois l'installation initiale (ou le rebase) terminée."
+        echo ""
+        
+        if [ "$STATUS" == "Enabled" ]; then
+            echo -e "État actuel : ${green}${bold}Activé${normal}"
+        else
+            echo -e "État actuel : ${yellow}${bold}Désactivé${normal}"
+        fi
+        echo ""
+        
+        OPTION=$(ugum choose "Désactiver le service (Recommandé)" "Activer le service" "Quitter sans rien modifier")
+    fi
+
+    case "${OPTION}" in
+        "Désactiver le service (Recommandé)"|"disable")
+            echo "Désactivation du service..."
+            sudo systemctl disable "$SERVICE"
+            echo -e "${yellow}${bold}Désactivé !${normal} Vous n'aurez plus la notification au prochain démarrage."
+            ;;
+        "Activer le service"|"enable")
+            echo "Activation du service..."
+            sudo systemctl enable "$SERVICE"
+            echo -e "${green}${bold}Activé !${normal} Le service se lancera au prochain démarrage."
+            ;;
+        *)
+            echo "Aucune modification apportée."
+            ;;
+    esac
+
 # ==================================================
 # 🎮 GAMING
 # ==================================================
