@@ -139,13 +139,13 @@ modules:
 
   - type: script
     scripts:
+      # --- Installation de VS Code Linux (version communautaire) via Homebrew ---
+      - install-vscode.sh
     snippets:
       # --- Installation de ScopeBuddy ---
       - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
       - "chmod +x /usr/bin/scb"
-      # --- Installation de VS Code Linux (version communautaire) via Homebrew ---
-      - install-vscode.sh
-
+    
   - type: files
     files:
       - source: system
