@@ -49,6 +49,7 @@ modules:
       - nautilus-gsconnect
       - nautilus-python
       - tailscale
+      - btop
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
