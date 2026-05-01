@@ -6,4 +6,4 @@ Comment=Update Fedora, Flatpaks
 Icon=/usr/share/ublue-os/icons/update.svg
 Categories=ConsoleOnly;System;
 Terminal=true
-Exec=/usr/bin/ujust update
+Exec=/usr/bin/topgrade

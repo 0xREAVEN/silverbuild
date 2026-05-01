@@ -94,3 +94,19 @@ setup-brew:
 
     echo -e "\n🎉 \033[32mInstallation terminée !\033[0m"
     echo "Ferme ce terminal et ouvres-en un nouveau pour utiliser la commande 'bbrew'."
+
+# Gérer Visual Studio Code (usage: ujust manage-vscode install/uninstall)
+manage-vscode action="install":
+    #!/usr/bin/bash
+    if [ "{{action}}" == "install" ]; then
+        echo "--- Installation de VS Code via Homebrew ---"
+        brew tap ublue-os/tap
+        brew install --cask visual-studio-code-linux
+        echo "✅ VS Code installé !"
+    elif [ "{{action}}" == "uninstall" ]; then
+        echo "--- Désinstallation de VS Code ---"
+        brew uninstall --cask visual-studio-code-linux
+        echo "🗑️ VS Code supprimé."
+    else
+        echo "Erreur : Utilisez 'ujust manage-vscode install' ou 'ujust manage-vscode uninstall'"
+    fi
