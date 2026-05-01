@@ -68,7 +68,6 @@ modules:
       - gamemode
       - rom-properties-gtk3
       - input-remapper
-      - scopebuddy
       - vkBasalt
       # --- Terminal ---
       - fish
