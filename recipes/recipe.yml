@@ -57,9 +57,13 @@ modules:
       - ublue-brew
       - ublue-os-media-automount-udev
       - ublue-os-just
+      - ublue-os-udev-rules
       # --- Services d'automatisation ---
       - uupd
+      - ublue-os-update-services
       - ublue-setup-services
+      - ublue-polkit-rules
+      - eol-rebaser
       # --- Gaming ---
       - steam
       - steam-devices
