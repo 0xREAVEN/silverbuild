@@ -42,8 +42,8 @@ modules:
       - git
       - bazaar
       - topgrade
-      # - glow
-      # - gum
+      - glow
+      - gum
       # - mesa-libOpenCL
       # - nautilus-extensions
       # - nautilus-gsconnect
