@@ -66,7 +66,7 @@ modules:
       - gamescope
       - mangohud
       - gamemode
-      # - rom-properties
+      - rom-properties-gtk3
       - input-remapper
       # - ScopeBuddy
       # - vkBasalt
@@ -74,7 +74,7 @@ modules:
       - fish
       - starship
 
-  - type: akmods
+  - type: akmods 
     install:
       - xpadneo
 
@@ -138,9 +138,6 @@ modules:
     brew-analytics: false
 
   - type: script
-    scripts:
-      # --- Installation de VS Code Linux (version communautaire) via Homebrew ---
-      - install-vscode.sh
     snippets:
       # --- Installation de ScopeBuddy ---
       - "curl -Lo /usr/bin/scb https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/main/bin/scopebuddy"
