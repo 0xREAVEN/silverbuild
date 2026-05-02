@@ -61,9 +61,10 @@ toggle-flatpak-setup ACTION="":
     #!/usr/bin/bash
     source /usr/lib/ujust/ujust.sh
     
-    SERVICE="system-flatpak-setup.service"
+    # On cible le timer !
+    SERVICE="system-flatpak-setup.timer"
     
-    # Vérifier l'état actuel du service
+    # Vérifier l'état actuel du timer
     if systemctl is-enabled --quiet "$SERVICE" 2>/dev/null; then
         STATUS="Enabled"
     else
@@ -100,13 +101,13 @@ toggle-flatpak-setup ACTION="":
 
     case "${OPTION}" in
         "Désactiver le service (Recommandé)"|"disable")
-            echo "Désactivation du service..."
-            sudo systemctl disable "$SERVICE"
+            echo "Désactivation du timer system-flatpak-setup..."
+            sudo systemctl disable --now "$SERVICE"
             echo -e "${yellow}${bold}Désactivé !${normal} Vous n'aurez plus la notification au prochain démarrage."
             ;;
         "Activer le service"|"enable")
-            echo "Activation du service..."
-            sudo systemctl enable "$SERVICE"
+            echo "Activation du timer system-flatpak-setup..."
+            sudo systemctl enable --now "$SERVICE"
             echo -e "${green}${bold}Activé !${normal} Le service se lancera au prochain démarrage."
             ;;
         *)
