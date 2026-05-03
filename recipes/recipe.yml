@@ -51,6 +51,7 @@ modules:
       - tailscale
       - btop
       - fuse
+      - fuse3
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
