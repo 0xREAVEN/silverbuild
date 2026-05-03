@@ -67,14 +67,9 @@ modules:
       - ublue-polkit-rules
       - eol-rebaser
       # --- Gaming ---
-      - steam
       - steam-devices
-      - gamescope
-      - mangohud
-      - gamemode
       - rom-properties-gtk3
       - input-remapper
-      - vkBasalt
       # --- Terminal ---
       - fish
       - starship
