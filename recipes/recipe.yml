@@ -74,6 +74,7 @@ modules:
       - rom-properties-gtk3
       - input-remapper
       - vkBasalt
+      - discord
       # --- Terminal ---
       - fish
       - starship
