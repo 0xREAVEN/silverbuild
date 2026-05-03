@@ -50,6 +50,11 @@ modules:
       - nautilus-python
       - tailscale
       - btop
+      - fuse
+      - fuse3
+      - fuse3-libs
+      - fuse-common
+      - fuse-overlayfs
       # --- Thèmes ---
       - papirus-icon-theme
       - bibata-cursor-themes
