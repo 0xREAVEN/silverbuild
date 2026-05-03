@@ -118,10 +118,14 @@ modules:
           - com.ranfdev.DistroShelf
           - org.gnome.Boxes
           # --- Gaming ---
+          - com.valvesoftware.Steam
           - com.heroicgameslauncher.hgl
           - io.github.Faugus.faugus-launcher
           - com.vysp3r.ProtonPlus
           - io.github.benjamimgois.goverlay
+          - org.freedesktop.Platform.VulkanLayer.MangoHud
+          - org.freedesktop.Platform.VulkanLayer.vkBasalt
+          - org.freedesktop.Platform.VulkanLayer.gamescope
 
   - type: fonts
     fonts:
