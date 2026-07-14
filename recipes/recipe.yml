@@ -69,7 +69,7 @@ modules:
       - eol-rebaser
       # --- Gaming ---
       - steam-devices
-      - rom-properties-gtk3
+      # - rom-properties-gtk3
       - input-remapper
       # --- Terminal ---
       - fish
