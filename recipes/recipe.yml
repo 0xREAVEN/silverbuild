@@ -80,7 +80,7 @@ modules:
   #    - xpadneo
 
   - type: default-flatpaks
-    configuration:
+    configurations:
       - scope: system
         install:
           # --- Applications GNOME ---
