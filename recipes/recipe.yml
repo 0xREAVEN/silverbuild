@@ -75,9 +75,9 @@ modules:
       - fish
       - starship
 
-  - type: akmods 
-    install:
-      - xpadneo
+  #- type: akmods 
+  #  install:
+  #    - xpadneo
 
   - type: default-flatpaks
     configurations:
