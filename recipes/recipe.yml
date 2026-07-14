@@ -124,9 +124,9 @@ modules:
           - io.github.Faugus.faugus-launcher
           - com.vysp3r.ProtonPlus
           - io.github.benjamimgois.goverlay
-          - org.freedesktop.Platform.VulkanLayer.MangoHud
-          - org.freedesktop.Platform.VulkanLayer.vkBasalt
-          - org.freedesktop.Platform.VulkanLayer.gamescope
+          # - org.freedesktop.Platform.VulkanLayer.MangoHud
+          # - org.freedesktop.Platform.VulkanLayer.vkBasalt
+          # - org.freedesktop.Platform.VulkanLayer.gamescope
 
   - type: fonts
     fonts:
