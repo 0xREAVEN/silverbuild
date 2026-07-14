@@ -80,52 +80,53 @@ modules:
   #    - xpadneo
 
   - type: default-flatpaks
-    system:
-      flatpaks:
-        # --- Applications GNOME ---
-        - org.gnome.Calculator
-        - org.gnome.Calendar
-        - org.gnome.Characters
-        - org.gnome.clocks
-        - org.gnome.Logs
-        - org.gnome.Maps
-        - org.gnome.Weather
-        - org.gnome.baobab
-        - org.gnome.Papers
-        - org.gnome.NautilusPreviewer
-        - org.gnome.font-viewer
-        - org.gnome.Showtime
-        - org.gnome.Lollypop
-        - org.gnome.Evolution
-        - org.gnome.TextEditor
-        - org.gnome.Loupe
-        - org.gnome.SimpleScan
-        # --- Outils système ---
-        - io.missioncenter.MissionCenter
-        - page.tesk.Refine
-        - it.mijorus.gearlever
-        - io.github.flattool.Warehouse
-        - io.github.flattool.Ignition
-        - com.mattjakeman.ExtensionManager
-        - com.github.tchx84.Flatseal
-        - io.github.ilya_zlobintsev.LACT
-        # --- Browser ---
-        - org.mozilla.firefox 
-        # --- Thèmes ---
-        - org.gtk.Gtk3theme.adw-gtk3-dark
-        - org.gtk.Gtk3theme.adw-gtk3
-        # --- Virtualisation ---
-        - com.ranfdev.DistroShelf
-        - org.gnome.Boxes
-        # --- Gaming ---
-        - com.valvesoftware.Steam
-        - com.heroicgameslauncher.hgl
-        - io.github.Faugus.faugus-launcher
-        - com.vysp3r.ProtonPlus
-        - io.github.benjamimgois.goverlay
-        - org.freedesktop.Platform.VulkanLayer.MangoHud
-        - org.freedesktop.Platform.VulkanLayer.vkBasalt
-        - org.freedesktop.Platform.VulkanLayer.gamescope
+    configuration:
+      - scope: system
+        install:
+          # --- Applications GNOME ---
+          - org.gnome.Calculator
+          - org.gnome.Calendar
+          - org.gnome.Characters
+          - org.gnome.clocks
+          - org.gnome.Logs
+          - org.gnome.Maps
+          - org.gnome.Weather
+          - org.gnome.baobab
+          - org.gnome.Papers
+          - org.gnome.NautilusPreviewer
+          - org.gnome.font-viewer
+          - org.gnome.Showtime
+          - org.gnome.Lollypop
+          - org.gnome.Evolution
+          - org.gnome.TextEditor
+          - org.gnome.Loupe
+          - org.gnome.SimpleScan
+          # --- Outils système ---
+          - io.missioncenter.MissionCenter
+          - page.tesk.Refine
+          - it.mijorus.gearlever
+          - io.github.flattool.Warehouse
+          - io.github.flattool.Ignition
+          - com.mattjakeman.ExtensionManager
+          - com.github.tchx84.Flatseal
+          - io.github.ilya_zlobintsev.LACT
+          # --- Browser ---
+          - org.mozilla.firefox 
+          # --- Thèmes ---
+          - org.gtk.Gtk3theme.adw-gtk3-dark
+          - org.gtk.Gtk3theme.adw-gtk3
+          # --- Virtualisation ---
+          - com.ranfdev.DistroShelf
+          - org.gnome.Boxes
+          # --- Gaming ---
+          - com.valvesoftware.Steam
+          - com.heroicgameslauncher.hgl
+          - io.github.Faugus.faugus-launcher
+          - com.vysp3r.ProtonPlus
+          - io.github.benjamimgois.goverlay
+          - org.freedesktop.Platform.VulkanLayer.MangoHud
+          - org.freedesktop.Platform.VulkanLayer.vkBasalt
+          - org.freedesktop.Platform.VulkanLayer.gamescope
 
   - type: fonts
     fonts:
