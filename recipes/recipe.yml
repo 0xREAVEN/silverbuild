@@ -81,7 +81,7 @@ modules:
 
   - type: default-flatpaks
     system:
-      install:
+      flatpaks:
         # --- Applications GNOME ---
         - org.gnome.Calculator
         - org.gnome.Calendar
